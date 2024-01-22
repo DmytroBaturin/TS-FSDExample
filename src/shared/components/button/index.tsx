@@ -3,7 +3,11 @@ import { clsx } from "clsx";
 
 type ButtonType = "primary" | "secondary" | "ico";
 
-type ButtonColor = "black" | "green";
+type ButtonColor =
+  | "bg-btn_disabled"
+  | "bg-btn_primary"
+  | "bg-btn_secondary"
+  | "bg-sky-200";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   color?: ButtonColor;
@@ -18,12 +22,14 @@ export const Button = ({
   onClick,
   className,
   disabled,
+  color,
 }: ButtonProps) => {
+  const buttonColorClass = disabled ? "bg-btn_disabled" : color;
+
+  const buttonClasses = clsx(className, buttonColorClass);
+
   return (
-    <button
-      className={clsx(className, disabled ? "bg-gray-300 text-gray-500" : "")}
-      onClick={onClick}
-    >
+    <button className={buttonClasses} onClick={onClick}>
       {children}
     </button>
   );

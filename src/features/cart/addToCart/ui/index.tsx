@@ -12,7 +12,8 @@ export const AddCartButton = (book: BookInfo) => {
       buttonType="ico"
       onClick={handleButtonClick}
       disabled={disabled}
-      className="p-4 gap-4 bg-sky-200 rounded-lg flex items-center justify-center"
+      color="bg-sky-200"
+      className="p-4 gap-4 rounded-lg flex items-center justify-center"
     >
       <Typography color="text-primary">До кошику</Typography>
       <Image src={wishIcon} size="w-1/1" />

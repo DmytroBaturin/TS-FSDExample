@@ -21,9 +21,9 @@ export const BookPage = () => {
   }, []);
 
   const description = book?.volumeInfo.description
-    ? String(parse(book?.volumeInfo.description || ""))
+    ? parse(book?.volumeInfo.description || "")
     : "Without Description";
-  const truncDescription = useTruncate(description || "", 400);
+  const truncDescription = useTruncate(description, 400);
 
   return (
     <div className="rounded-lg flex bg-white p-6 w-[100%] gap-10 flex-row flex-wrap items-center m-auto justify-center">

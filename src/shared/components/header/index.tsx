@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className="p-5 bg-white flex justify-center shadow-md">
       <div className="flex items-center justify-between w-4/5">
-        <Typography theme="font-bold" size="text-xl">
+        <Typography theme="font-bold" size="text-lg">
           <Link to="/">Logo</Link>
         </Typography>
         <div className="flex items-center gap-[50px]">

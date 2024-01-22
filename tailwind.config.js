@@ -21,6 +21,9 @@ export default {
       colors: {
         primary: "#000000",
         secondary: "rgba(0,0,0,0.6)",
+        btn_primary: "rgb(65,150,255)",
+        btn_secondary: "#your_secondary_color",
+        btn_disabled: "rgb(206,206,206)",
       },
       screens: {
         laptop: "1024px",
