@@ -1,4 +1,4 @@
-import { Book } from "@/types/book";
+import { Book } from "@/shared/types/book";
 
 export interface BooksApiResponse {
   kind?: string;

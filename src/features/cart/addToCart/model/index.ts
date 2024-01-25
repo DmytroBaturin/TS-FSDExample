@@ -1,5 +1,5 @@
-import { useCartStore } from "@/store";
-import { BookInfo } from "@/types/book";
+import { useCartStore } from "src/shared/store";
+import { BookInfo } from "@/shared/types/book";
 
 export const useAddToCart = (bookId: string, book: BookInfo) => {
   const isBookInCart = useCartStore((state) => state.isBookInCart);

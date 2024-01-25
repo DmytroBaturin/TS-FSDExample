@@ -1,4 +1,4 @@
-import { useCartStore } from "@/store";
+import { useCartStore } from "src/shared/store";
 
 export const useRemoveFromCart = (bookId: string) => {
   const { removeFromCart } = useCartStore();

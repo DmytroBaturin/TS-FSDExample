@@ -7,7 +7,7 @@ import parse from "html-react-parser";
 import { useTruncate } from "@/shared/hooks/useTruncate";
 import { CardImageSkeleton } from "@/shared/components/skeletons/CardImage";
 import { AddCartButton } from "@/features";
-import { Book } from "@/types/book";
+import { Book } from "@/shared/types/book";
 
 export const BookPage = () => {
   const { getBook } = useBooksApi();

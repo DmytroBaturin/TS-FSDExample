@@ -1,5 +1,5 @@
 import { Input } from "@/shared/components/input";
-import { Book } from "@/types/book";
+import { Book } from "@/shared/types/book";
 import { Typography } from "@/shared/components/typography";
 import Icon from "@/shared/components/icon";
 import { useSearchModel } from "@/features/book/searchBook/model";

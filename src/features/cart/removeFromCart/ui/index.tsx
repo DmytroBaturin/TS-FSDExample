@@ -1,5 +1,5 @@
 import { Button } from "@/shared/components/button";
-import { BookInfo } from "@/types/book";
+import { BookInfo } from "@/shared/types/book";
 import { Typography } from "@/shared/components/typography";
 import { useRemoveFromCart } from "@/features/cart/removeFromCart/model";
 

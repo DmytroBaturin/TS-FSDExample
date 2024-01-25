@@ -1,8 +1,8 @@
-import cartIco from "@/assets/icons/header_cart.svg";
-import heartIco from "@/assets/icons/header_heart.svg";
-import searchIco from "@/assets/icons/search.svg";
-import userIco from "@/assets/icons/header_user.svg";
-import closeIco from "@/assets/icons/close.svg";
+import cartIco from "@/shared/assets/icons/header_cart.svg";
+import heartIco from "@/shared/assets/icons/header_heart.svg";
+import searchIco from "@/shared/assets/icons/search.svg";
+import userIco from "@/shared/assets/icons/header_user.svg";
+import closeIco from "@/shared/assets/icons/close.svg";
 
 type IconName = "cart" | "heart" | "user" | "search" | "close";
 

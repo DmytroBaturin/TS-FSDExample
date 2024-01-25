@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Typography } from "@/shared/components/typography";
-import { Book } from "@/types/book";
+import { Book } from "@/shared/types/book";
 import { useTruncate } from "@/shared/hooks/useTruncate";
 
 interface RowProps {

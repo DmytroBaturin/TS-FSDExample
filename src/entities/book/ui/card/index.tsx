@@ -1,6 +1,6 @@
 import { Card } from "@/shared/components/card";
 import { Typography } from "@/shared/components/typography";
-import { BookInfo } from "@/types/book";
+import { BookInfo } from "@/shared/types/book";
 import { Image } from "@/shared/components/image";
 import { Link } from "react-router-dom";
 import { useTruncate } from "@/shared/hooks/useTruncate";
