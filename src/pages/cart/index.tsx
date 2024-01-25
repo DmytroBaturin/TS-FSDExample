@@ -1,4 +1,4 @@
-import { useCartStore } from "src/shared/store";
+import { useCartStore } from "@/shared/store";
 import { RowBookCard } from "@/entities/book/ui/row";
 import { RemoveFromCartButton } from "@/features/cart/removeFromCart/ui";
 export const CartPage = () => {
