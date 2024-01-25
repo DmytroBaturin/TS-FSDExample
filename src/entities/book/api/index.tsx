@@ -36,5 +36,21 @@ export const useBooksApi = () => {
       throw error;
     }
   };
-  return { getBooks, getBook };
+
+  const searchBooks = async (query: string): Promise<BooksApiResponse> => {
+    try {
+      const response = await fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=${query}`,
+      );
+      if (!response.ok) {
+        new Error("Network response was not ok");
+      }
+      return (await response.json()) as BooksApiResponse;
+    } catch (error) {
+      console.error("Fetching books failed:", error);
+      throw error;
+    }
+  };
+
+  return { getBooks, getBook, searchBooks };
 };

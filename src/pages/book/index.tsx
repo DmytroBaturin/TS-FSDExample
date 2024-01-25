@@ -4,7 +4,7 @@ import { useBooksApi } from "@/entities/book";
 import { Typography } from "@/shared/components/typography";
 import { Image } from "@/shared/components/image";
 import parse from "html-react-parser";
-import { useTruncate } from "@/shared/hooks";
+import { useTruncate } from "@/shared/hooks/useTruncate";
 import { CardImageSkeleton } from "@/shared/components/skeletons/CardImage";
 import { AddCartButton } from "@/features";
 import { Book } from "@/types/book";
@@ -18,7 +18,7 @@ export const BookPage = () => {
     getBook(id).then((r) => {
       setBook(r);
     });
-  }, []);
+  }, [id]);
 
   const description = book?.volumeInfo.description
     ? parse(book?.volumeInfo.description || "")

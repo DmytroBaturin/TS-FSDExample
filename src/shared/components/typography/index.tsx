@@ -6,6 +6,7 @@ type TypographySizes =
   | "text-sm"
   | "text-base"
   | "text-lg"
+  | "text-mini"
   | "text-xl";
 
 type TypographyColors = "text-primary" | "text-secondary";

@@ -3,7 +3,7 @@ import { Typography } from "@/shared/components/typography";
 import { BookInfo } from "@/types/book";
 import { Image } from "@/shared/components/image";
 import { Link } from "react-router-dom";
-import { useTruncate } from "@/shared/hooks";
+import { useTruncate } from "@/shared/hooks/useTruncate";
 
 interface BookCardProps {
   id?: string;
