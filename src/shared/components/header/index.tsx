@@ -1,7 +1,6 @@
 import { Typography } from "../typography";
 import { Link, NavLink } from "react-router-dom";
 import { SearchInput } from "@/features/book/searchBook/ui";
-
 export const Header = () => {
   return (
     <div className="p-5 bg-white flex justify-center shadow-md">

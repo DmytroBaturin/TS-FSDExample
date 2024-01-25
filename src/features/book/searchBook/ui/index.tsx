@@ -3,7 +3,7 @@ import { Book } from "@/shared/types/book";
 import { Typography } from "@/shared/components/typography";
 import Icon from "@/shared/components/icon";
 import { useSearchModel } from "@/features/book/searchBook/model";
-import { Row } from "@/features/book/searchBook/ui/ui";
+import { Row } from "@/features/book/searchBook/ui/searchRow";
 import { useOutsideClick } from "@/shared/hooks/useOutsideClick";
 
 export const SearchInput = () => {
@@ -29,13 +29,13 @@ export const SearchInput = () => {
       />
       {isFocused ? (
         value ? (
-          <div className="absolute bg-white max-h-[300px] py-1 px-2 overflow-scroll w-[100%] rounded shadow">
+          <div className="z-20 absolute bg-white max-h-[300px] py-1 px-2 overflow-scroll w-[100%] rounded shadow">
             {books.items?.map((book: Book) => (
               <Row book={book} key={book.id} />
             ))}
           </div>
         ) : (
-          <div className="absolute bg-white flex justify-center py-2 max-h-[300px] overflow-scroll w-[100%] rounded shadow">
+          <div className="z-20 absolute bg-white flex justify-center py-2 max-h-[300px] overflow-scroll w-[100%] rounded shadow">
             <Typography size="text-sm" color="text-secondary">
               Write something to search
             </Typography>

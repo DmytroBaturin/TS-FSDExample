@@ -7,10 +7,10 @@ export interface BooksApiResponse {
 }
 
 export const useBooksApi = () => {
-  const getBooks = async (): Promise<BooksApiResponse> => {
+  const getBooks = async (orderBy: string): Promise<BooksApiResponse> => {
     try {
       const response = await fetch(
-        "https://www.googleapis.com/books/v1/volumes?q=Harry&maxResults=10",
+        `https://www.googleapis.com/books/v1/volumes?q=Harry&maxResults=12&${orderBy && `orderBy=${orderBy}`}`,
       );
       if (!response.ok) {
         new Error("Network response was not ok");

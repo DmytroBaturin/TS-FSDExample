@@ -1,4 +1,4 @@
-import { Layout } from "./layout";
+import { Layout } from "@/shared/layout";
 import { withRouter } from "./routers";
 import { Suspense } from "react";
 

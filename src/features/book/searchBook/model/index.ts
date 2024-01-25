@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { BooksApiResponse, useBooksApi } from "@/entities/book";
+import { useDebounce } from "@/shared/hooks/useDebounce";
 
 export const useSearchModel = () => {
   const { searchBooks } = useBooksApi();
@@ -7,11 +8,18 @@ export const useSearchModel = () => {
   const [value, setValue] = useState("");
   const [books, setBooks] = useState<BooksApiResponse>({ items: [] });
 
-  useEffect(() => {
-    if (value) {
-      searchBooks(value).then(setBooks);
+  const debouncedValue = useDebounce(value, 500);
+
+  const search = useCallback(async () => {
+    if (debouncedValue) {
+      const books = await searchBooks(debouncedValue);
+      setBooks(books);
     }
-  }, [value]);
+  }, [debouncedValue]);
+
+  useEffect(() => {
+    search();
+  }, [debouncedValue, search]);
 
   return { value, setValue, books, setIsFocused, isFocused };
 };
