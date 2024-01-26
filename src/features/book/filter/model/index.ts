@@ -1,4 +1,3 @@
-// useFilterModel hook
 import { useBooksApi } from "@/entities/book";
 
 export const useFilterModel = () => {

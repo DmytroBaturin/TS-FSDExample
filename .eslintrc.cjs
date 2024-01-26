@@ -10,9 +10,19 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    "react/require-default-props": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": "off",
+    "react-hooks/rules-of-hooks": "error", // For checking rules of hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "no-shadow": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-underscore-dangle": "off",
+    "import/no-unresolved": "off",
+    quotes: ["error", "double"],
+    "no-param-reassign": "off",
+    "no-undef": "off",
+    "max-len": "off",
   },
 }

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import { Book } from "@/entities/book";
+import { Book } from "@/shared/types/book";
 
 interface CartState {
   cart: Book[];

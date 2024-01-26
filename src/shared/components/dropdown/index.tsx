@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/shared/components/button";
 import { Typography } from "@/shared/components/typography";
 import { useOutsideClick } from "@/shared/hooks/useOutsideClick";
@@ -10,7 +10,7 @@ interface DropDownProps {
 
 export const DropDown = ({ options, optionSelection }: DropDownProps) => {
   const [showDropDown, setShowDropDown] = useState<boolean>(false);
-  const [selectedOption, setSelectedOption] = useState<string>("Вибери опцію");
+  const [selectedOption, setSelectedOption] = useState<string>("Choose option");
   const toggleDropDown = () => {
     setShowDropDown(!showDropDown);
   };
@@ -36,7 +36,7 @@ export const DropDown = ({ options, optionSelection }: DropDownProps) => {
         {selectedOption}
       </Button>
       {showDropDown && (
-        <div className="flex w-[100%] rounded shadow gap-2 p-2 bg-white absolute flex-col">
+        <div className="flex w-[100%] z-10 rounded shadow gap-2 p-2 bg-white absolute flex-col">
           {options?.map((item, index) => (
             <div
               key={index}
