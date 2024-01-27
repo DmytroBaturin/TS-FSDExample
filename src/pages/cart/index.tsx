@@ -1,6 +1,6 @@
 import { useCartStore } from "@/entities/cart/store";
 import { RowBookCard } from "@/entities/book/ui/row";
-import { RemoveFromCartButton } from "@/features/cart/removeFromCart/ui";
+import { RemoveFromCartButton } from "@/features/cart/removeFromCart";
 export const CartPage = () => {
   const { cart } = useCartStore();
   return (
