@@ -12,6 +12,7 @@ const BookPage = lazy(() =>
 );
 
 export const withRouter = () => {
+  //
   return (
     <Routes>
       <Route path="/" index element={<MainPage />} />

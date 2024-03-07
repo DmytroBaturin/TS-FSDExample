@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Header } from "@/shared/components/header";
+import { Header } from "@/widgets/header";
 
 interface LayoutProps {
   children: ReactNode;

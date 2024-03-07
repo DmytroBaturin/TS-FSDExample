@@ -6,7 +6,14 @@ export const Filter = ({ optionSelection }: FilterProps) => {
   return (
     <Dropdown
       optionSelection={optionSelection}
-      options={["newest", "relevance"]}
+      options={{
+        Newest: {
+          ua: "Найновіше",
+        },
+        Relevance: {
+          ua: "По рейтингу",
+        },
+      }}
     />
   );
 };

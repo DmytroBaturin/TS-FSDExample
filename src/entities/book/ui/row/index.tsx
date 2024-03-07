@@ -13,13 +13,16 @@ interface BookCardProps {
 export const RowBookCard = ({ book, id, action }: BookCardProps) => {
   return (
     <Card
-      className="gap-4 h-[330px] items-center overflow-auto ease-in-out p-6 bg-white rounded-lg flex flex-row"
+      className="gap-4 h-[330px] items-center max-md:flex-col max-md:text-center overflow-auto ease-in-out p-6 bg-white rounded-lg flex flex-row"
       type="w-card-column"
     >
       <Link to={`/book/${id}`}>
-        <Image src={book.imageLinks?.thumbnail} className="h-64 w-[200px]" />
+        <Image
+          src={book.imageLinks?.thumbnail}
+          className="h-64 min-w-[180px]"
+        />
       </Link>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 max-md:items-center">
         <Typography theme="font-bold" size="text-lg">
           {book.title}
         </Typography>

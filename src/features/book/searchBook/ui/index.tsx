@@ -10,7 +10,7 @@ export const SearchInput = () => {
   const { setIsFocused, isFocused, value, setValue, books } = useSearchModel();
 
   const action = () => {
-    setIsFocused(!isFocused);
+    setIsFocused(false);
     value ? setValue("") : null;
   };
 
@@ -31,7 +31,11 @@ export const SearchInput = () => {
         value ? (
           <div className="z-20 absolute bg-white max-h-[300px] py-1 px-2 overflow-scroll w-[100%] rounded shadow">
             {books.items?.map((book: Book) => (
-              <Row book={book} key={book.id} />
+              <Row
+                classname="hover:bg-gray-50 p-1 rounded"
+                book={book}
+                key={book.id}
+              />
             ))}
           </div>
         ) : (

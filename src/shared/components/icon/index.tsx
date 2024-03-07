@@ -23,7 +23,7 @@ const Icon = ({ name }: IconProps) => {
 
   return (
     <div>
-      <img src={IconToRender} />
+      <img alt={ICONS[name]} src={IconToRender} />
     </div>
   );
 };
